@@ -308,14 +308,22 @@
 
         <div class="right ">
             <div class="header ">
-                <input name="text " src="img/search.png " placeholder="Трек, исполнитель " class="treck search ">
 
-                <!--<div class="icon ">
-                    <svg class="icon " viewBox="0 -5 30 50 "> 
-            <circle cx="20 " cy="20 " r="14 " fill="white " stroke-width="2 " stroke="rgb(180,180,180) "/>                     
-            <line x1="30 " y1="30 " x2="40 " y2="40 " stroke-width="3 " stroke="rgb(180,180,180) " />              
-            </svg>
-                </div>-->
+
+
+                <div class="search">
+                    <div class="search_icon">
+                        <svg class="icon " viewBox="-10 5 70 40 "> 
+                        <circle cx="20 " cy="20 " r="14 " fill="white " stroke-width="2 " stroke="rgb(180,180,180) "/>                     
+                        <line x1="30 " y1="30 " x2="40 " y2="40 " stroke-width="3 " stroke="rgb(180,180,180) " />              
+                        </svg>
+                    </div>
+                    <div>
+                        <input name="text " src="" placeholder="Трек, исполнитель" value="" class="treck">
+                    </div>
+
+                </div>
+
 
 
                 <div class="btn_icon_3 ">
@@ -375,7 +383,9 @@
             <div class="slider_1 ">
 
                 <div class="slider ">
-                    <div class="img-overlay ">
+                    <img class="img_slider" src="img/golos.jpg" alt="">
+                    <div class="img-overlay "></div>
+                    <div class="img-overlay_1">
                         <div class="strelka_slider ">
 
                             <svg class="strelka_slider_1" viewBox="30 0 50 50 ">
@@ -385,29 +395,37 @@
                                             </svg>
 
                         </div>
+
                     </div>
                 </div>
 
                 <div class="slider ">
+                    <img class="img_slider_not_opacity" src="img/pistolet.jpg" alt="">
                 </div>
 
                 <div class="slider ">
+                    <img class="img_slider" src="img/bossanova.jpg" alt="">
                     <div class="img-overlay "></div>
                 </div>
 
                 <div class="slider ">
+                    <img class="img_slider" src="img/optimizm.jpg" alt="">
                     <div class="img-overlay "></div>
                 </div>
                 <div class="slider ">
+                    <img class="img_slider" src="img/times.jpg" alt="">
                     <div class="img-overlay "></div>
                 </div>
 
                 <div class="slider ">
+                    <img class="img_slider" src="img/golos.jpg" alt="">
                     <div class="img-overlay "></div>
                 </div>
-
                 <div class="slider ">
+                    <img class="img_slider" src="img/pistolet.jpg" alt="">
+                    <div class="img-overlay "></div>
                     <div class="img-overlay_2 ">
+
                         <div class="strelka_slider ">
 
                             <svg class="strelka_slider_2" viewBox="30 0 50 50 ">
@@ -418,6 +436,7 @@
 
                         </div>
                     </div>
+
                 </div>
 
 
@@ -429,10 +448,15 @@
                     <h4>Триумфаторы</h4>
                     <p>Под настроение</p>
                 </div>
-                <div class="triumf-center ">
-                    <div class="triumf_img_block "><img class="triumf_img " src="img/senorita.jpg " alt=" ">
+
+                <!-- <div class="triumf-center ">
+                    <div class="triumf_img_block "><img class="triumf_img " src="img/jara.jpg" alt=" ">
                         <div class="triumf-name-block ">
                             <div class="triumf-name ">
+
+                                <input id="zhara1" type="button" value="Play" />
+                                <audio id="audio1" src="audio/Elena_Temnikova_-_ZHara.mp3" autostart="false"></audio>
+
                                 <p>Жара</p>
                             </div>
 
@@ -443,41 +467,72 @@
                         <div class="times ">
                             <p>5:38</p>
                         </div>
+                    </div> -->
+
+                <div class="triumf-center ">
+                    <div id="q">
+                        <div class="triumf_img_block"><img class="triumf_img " src="img/jara.jpg" alt=" ">
+                            <div class="triumf-name-block">
+                                <div class="triumf-name ">
+
+                                    <input id="zhara1" type="button" value="Play" />
+                                    <audio id="audio1" src="audio/Elena_Temnikova_-_ZHara.mp3" autostart="false"></audio>
+
+                                    <p id="nameW">Жара</p>
+                                </div>
+
+                                <div>
+                                    <p>Елена Темникова</p>
+                                </div>
+                            </div>
+                            <div class="times ">
+                                <p>5:38</p>
+                            </div>
+                        </div>
+
+                        <div class="triumf_img_block "><img class="triumf_img " src="img/senorita.jpg " alt=" ">
+                            <div class="triumf-name-block ">
+                                <div class="triumf-name ">
+
+                                    <input id="zhara2" type="button" value="Play" />
+                                    <audio id="audio2" src="audio/Shawn Mendes & Camila Cabello - Senorita.mp3" autostart="false"></audio>
+
+                                    <p>Senorita</p>
+                                </div>
+
+                                <div>
+                                    <p>Shawn Mendes</p>
+                                </div>
+                            </div>
+                            <div class="times ">
+                                <p>3:29</p>
+                            </div>
+                        </div>
+
+                        <div class="triumf_img_block "><img class="triumf_img " src="img/ashiel.jpg" alt=" ">
+                            <div class="triumf-name-block ">
+                                <div class="triumf-name ">
+
+                                    <input id="ashley" type="button" value="Play" />
+                                    <audio id="audio3" src="audio/mixvon.net_ashley_o_-_on_a_roll_imp416438.mp3" autostart="false"></audio>
+
+                                    <p>On A Rol</p>
+                                </div>
+
+                                <div>
+                                    <p>Ashley O</p>
+                                </div>
+
+                            </div>
+
+                            <div class="times ">
+                                <p>2:53</p>
+                            </div>
+                        </div>
                     </div>
+                    <input type="bottom " value="Все 26 треков " class="triumf-button ">
 
-                    <div class="triumf_img_block "><img class="triumf_img " src="img/senorita.jpg " alt=" ">
-                        <div class="triumf-name-block ">
-                            <div class="triumf-name ">
-                                <p>Senorita</p>
-                            </div>
-
-                            <div>
-                                <p>Shawn Mendes</p>
-                            </div>
-                        </div>
-                        <div class="times ">
-                            <p>3:29</p>
-                        </div>
-                    </div>
-                    <div class="triumf_img_block "><img class="triumf_img " src="img/senorita.jpg " alt=" ">
-                        <div class="triumf-name-block ">
-                            <div class="triumf-name ">
-                                <p>On A Rol</p>
-                            </div>
-
-                            <div>
-                                <p>Ashley O</p>
-                            </div>
-
-                        </div>
-
-                        <div class="times ">
-                            <p>2:53</p>
-                        </div>
-                    </div>
                 </div>
-                <input type="bottom " value="Все 26 треков " class="triumf-button ">
-
 
                 <div class="pod-nastroenie ">
                     <div class="pod-nastroenie-top ">
@@ -531,7 +586,7 @@
 
                         <div class="pod-nastroenie-center-block ">
                             <div class="pod-nastroenie-center-img ">
-                                <img src="img/qqq.jpg " alt=" ">
+                                <img src="img/bossanova.jpg" alt=" ">
                             </div>
 
                             <div class="pod-nastroenie-center-text ">
@@ -544,7 +599,7 @@
 
                         <div class="pod-nastroenie-center-block ">
                             <div class="pod-nastroenie-center-img ">
-                                <img src="img/music.jpg " alt=" ">
+                                <img src="img/optimizm.jpg" alt=" ">
                             </div>
 
                             <div class="pod-nastroenie-center-text ">
@@ -557,7 +612,7 @@
 
                         <div class="pod-nastroenie-center-block ">
                             <div class="pod-nastroenie-center-img ">
-                                <img src="img/credo.jpg " alt=" ">
+                                <img src="img/times.jpg " alt=" ">
                             </div>
 
                             <div class="pod-nastroenie-center-text ">
@@ -572,7 +627,7 @@
 
                         <div class="pod-nastroenie-center-block ">
                             <div class="pod-nastroenie-center-img ">
-                                <img src="img/senorita.jpg " alt=" ">
+                                <img src="img/golos.jpg" alt=" ">
                             </div>
 
                             <div class="pod-nastroenie-center-text ">

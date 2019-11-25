@@ -149,20 +149,36 @@ body {
 
 .header {
     display: flex;
-    margin: 50px 0px 50px 50px;
+    margin: 50px 0px 130px 50px;
     width: 95%;
-    height: 8%;
+    height: 50px;
 }
 
 .treck {
     width: 730px;
     height: 50px;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 1px solid #cccccc;
-    margin: 0px 110px 0px 0px;
+    background-position: 4px;
+}
+
+.treck::-webkit-input-placeholder {
+    padding-left: 50px;
+}
+
+.search_icon {
+    margin-right: -50px;
+    padding-right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
 }
 
 .search {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 50px;
+    margin: 0px 40px 0px 0px;
     /*background-image: url(img/search.png);
     background-repeat: no-repeat;*/
     /*Убираем повтор изображения*/
@@ -171,9 +187,8 @@ body {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
-    margin: 5px 10px 0px 0px;
+    width: 50px;
+    height: 50px;
 }
 
 .btn_icon_1 {
@@ -208,7 +223,7 @@ body {
 .slider_1 {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: nowrap;
 }
 
@@ -217,18 +232,27 @@ body {
     width: 200px;
     height: 200px;
     justify-content: center;
-    background: url(img/credo.jpg);
+    /*background: url(img/credo.jpg);*/
     position: relative;
+    z-index: -1;
+    justify-content: flex-end;
 }
 
-.img-overlay {
-    position: absolute;
-    background: rgba(175, 175, 175, 0.5);
-    width: 100%;
-    height: 100%;
-    transition: .3s;
-    display: flex;
-    justify-content: flex-start;
+.img_slider {
+    width: 200px;
+    height: 200px;
+    opacity: .5;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.img_slider_not_opacity {
+    width: 200px;
+    height: 200px;
 }
 
 .strelka_slider {
@@ -237,6 +261,7 @@ body {
     height: 200px;
     background-color: #f6f6f6;
     align-items: center;
+    opacity: .5;
 }
 
 .strelka_slider_1 {
@@ -247,14 +272,32 @@ body {
     justify-content: center;
 }
 
-.img-overlay_2 {
+.img-overlay {
     position: absolute;
-    background: rgba(175, 175, 175, 0.5);
+    background: white;
+    /*background: rgba(175, 175, 175, 0.5);*/
     width: 100%;
     height: 100%;
     transition: .3s;
-    display: flex;
-    justify-content: flex-end;
+    opacity: .1;
+}
+
+.img-overlay_1 {
+    position: absolute;
+    width: 30px;
+    height: 200px;
+    transition: .3s;
+    background: white;
+    opacity: .7;
+}
+
+.img-overlay_2 {
+    position: absolute;
+    width: 30px;
+    height: 200px;
+    transition: .3s;
+    background: white;
+    opacity: .7;
 }
 
 .strelka_slider_2 {
@@ -298,7 +341,17 @@ body {
 .triumf_img_block {
     margin-bottom: 30px;
     display: flex;
+    cursor: pointer;
 }
+
+
+/*.triumf_img_block:hover {
+    background-color: rgb(171, 171, 172);
+}
+
+.triumf_img_block:active {
+    background-color: rgb(98, 99, 133);
+}*/
 
 .triumf_img_block p {
     margin-left: 20px;
@@ -420,6 +473,12 @@ body {
 
 .pod-nastroenie-center-block:last-child {
     margin: 0px 0px 15px 0px;
+}
+
+.bl {
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
 }
 
 
