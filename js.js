@@ -58,8 +58,8 @@ createSongElement(state.music[0]);
 
 function block() {
     let w = document.createElement('w');
-    w.className = "triumf_img_block";
     w.insertAdjacentHTML('beforeend', '<div id="glav"></div>');
+    w.classList.add('triumf_img_block');
     q.append(w);
     console.log('tyr');
     //q.insertAdjacentHTML('beforeend', '<div id="b"class="bl"></div>');
@@ -67,58 +67,108 @@ function block() {
 }
 block();
 
-function imgPhoto() {
-    let img = document.createElement('img');
-    img.className = "triumf_img";
-    img.innerHTML = 'src = "img/senorita.jpg"';
-    img.insertAdjacentHTML('afterbegin', '<img>');
-    glav.append(img);
+function mapMusic() {
+    state.music.map(function(song) {
+        let img = document.createElement('img');
+        img.insertAdjacentHTML('afterbegin', '<img>');
+        img.classList.add('triumf_img');
+        img.src = song.imageSrc;
+        glav.prepend(img);
+    });
 }
-imgPhoto();
+mapMusic();
+
+// function imgPhoto() {
+//     let img = document.createElement('img');
+//     img.classList.add('triumf_img');
+//     img.className = "triumf_img";
+//     img.innerHTML = state.imageSrc;
+//     img.insertAdjacentHTML('afterbegin', '<img class="triumf_img">');
+//     glav.append(img);
+// }
+// imgPhoto();
 
 function triumfNameBlock() {
     let nameBlock = document.createElement('nameBlock');
-    nameBlock.className = 'triumf-name-block';
     nameBlock.insertAdjacentHTML('beforeend', '<div id="nameBlockId"></div>');
-    glav.append(nameBlock);
+    nameBlock.classList.add('triumf-name-block');
+    glav.after(nameBlock);
     console.log('nameBlock');
 }
 triumfNameBlock();
 
 function buttonAndName() {
-    let btnName = document.createElement('btnName');
-    btnName.className = 'triumf-name';
-    btnName.insertAdjacentHTML('afterbegin', '<div></div>');
-    nameBlockId.prepend(btnName);
-    console.log('triumf-name')
+    state.music.map(function(song) {
+        let btnName = document.createElement('btnName');
+        btnName.insertAdjacentHTML('afterbegin', '<div id="btnNameId"> </div>');
+        btnName.classList.add('triumf-name');
+        nameBlockId.prepend(btnName);
+        console.log('triumf-name');
+
+        let inpZhara1 = document.createElement('inpZhara1');
+        inpZhara1.insertAdjacentHTML('afterbegin', '<input id="zhara1" type="button" value="Play">');
+        // inpZhara1.innerHTML = song.buttonId;
+        btnNameId.prepend(inpZhara1);
+        console.log('inpZhara1');
+
+        let audioRecord = document.createElement('audioRecord');
+        audioRecord.insertAdjacentHTML('afterbegin', '<audio id="audio1" autostart="false"></audio>');
+        audioRecord.src = song.audioSr;
+        btnNameId.append(audioRecord);
+        console.log('audioRecord');
+
+        let name = document.createElement('name');
+        name.insertAdjacentHTML('afterbegin', '<p></p>');
+        name.innerHTML = song.name;
+        btnNameId.append(name);
+        console.log('name');
+
+        let artist = document.createElement('artist');
+        artist.insertAdjacentHTML('beforeend', '<div><p></p></div>');
+        artist.innerHTML = song.artist;
+        nameBlockId.append(artist);
+        console.log('artist');
+
+        let times = document.createElement('times');
+        times.insertAdjacentHTML('beforeend', '<div><p></p></div>');
+        times.classList.add('times');
+        times.innerHTML = song.time;
+        nameBlockId.append(times);
+
+    });
 }
 buttonAndName();
 
-function inputZhara1() {
-    let inpZhara1 = document.createElement('inpZhara1');
-    inpZhara1.className = 'zhara1';
-    inpZhara1.insertAdjacentHTML('afterbegin', '<input id="zhara1" type="button" value="Play">');
-    nameBlockId.prepend(inpZhara1);
-    console.log('inpZhara1');
-}
-inputZhara1();
+// function inputZhara1() {
+//     let inpZhara1 = document.createElement('inpZhara1');
+//     inpZhara1.insertAdjacentHTML('afterbegin', '<input id="zhara1" type="button" value="Play">');
+//     nameBlockId.prepend(inpZhara1);
+//     console.log('inpZhara1');
+//     let audioRecord = document.createElement('audioRecord');
+//     audioRecord.innerHTML = "";
+//     audioRecord.insertAdjacentHTML('afterbegin', '<audio id="audio1" src="audio/Elena_Temnikova_-_ZHara.mp3" autostart="false"></audio>');
+//     nameBlockId.append(audioRecord);
+//     console.log('audioRecord');
+// }
+// inputZhara1();
 
-function audioRecording() {
-    let audioRecord = document.createElement('audioRecord');
-    audioRecord.innerHTML = "";
-    audioRecord.insertAdjacentHTML('afterbegin', '<audio id="audio1" src="audio/Elena_Temnikova_-_ZHara.mp3" autostart="false"></audio>');
-    nameBlockId.append(audioRecord);
-    console.log('audioRecord');
-}
-audioRecording();
 
-function name() {
-    let name = document.createElement('name');
-    name.innerHTML = 'Жара';
-    nameBlockId.append(name);
-    console.log('name');
-}
-name();
+// function audioRecording() {
+//     let audioRecord = document.createElement('audioRecord');
+//     audioRecord.innerHTML = "";
+//     audioRecord.insertAdjacentHTML('afterbegin', '<audio id="audio1" src="audio/Elena_Temnikova_-_ZHara.mp3" autostart="false"></audio>');
+//     nameBlockId.append(audioRecord);
+//     console.log('audioRecord');
+// }
+// audioRecording();
+
+// function name() {
+//     let name = document.createElement('name');
+//     name.innerHTML = '';
+//     nameBlockId.append(name);
+//     console.log('name');
+// }
+// name();
 
 
 /*function triumfImgBlock() {

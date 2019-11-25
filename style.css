@@ -361,17 +361,6 @@ body {
     color: #666666;
 }
 
-.triumf-button {
-    width: 200px;
-    height: 50px;
-    color: white;
-    background-color: rgb(255, 0, 0);
-    text-align: center;
-    font-size: 0.8em;
-    border: 0;
-    margin-bottom: 45px;
-}
-
 .triumf-name-block {
     display: flex;
     flex-wrap: wrap;
@@ -385,6 +374,17 @@ body {
     justify-content: flex-end;
     font-size: 1em;
     color: #666666;
+}
+
+.triumf-button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 0.8em;
+    border: 0;
+    margin-bottom: 45px;
 }
 
 .pod-nastroenie {
