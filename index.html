@@ -23,8 +23,10 @@
                 </div>
 
                 <div class="credo">
-                    <div class="credo-img"><img class="credo-img" src="img/credo.jpg" alt="">
-                        <div class="record_player"></div>
+                    <div class="credo-img"><img class="credo-img" id="imgPlay" src="img/credo.jpg" alt="">
+                        <div class="record_player">
+                            <div class="record_player_line"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -37,7 +39,7 @@
 
             <div class="strelki">
                 <div>
-                    <svg class=" stre2 " viewBox="50 10 130 50 ">  
+                    <svg id="prevId" class="stre2 " viewBox="50 10 130 50 ">  
         <line x1="134 " y1="35 " x2="135 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/> 
         <line x1="120 " y1="60 " x2="120 " y2="10 " stroke-width="1 " stroke="rgb(0,0,0) "/>
         <line x1="120 " y1="60 " x2="160 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/>
@@ -128,7 +130,7 @@
                 </div>
 
                 <div>
-                    <svg class="stre_play " viewBox="90 0 100 70 ">  
+                    <svg id="playId" class="stre_play " viewBox="90 0 100 70 ">  
 <line x1="134 " y1="35 " x2="135 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/> 
 <line x1="120 " y1="60 " x2="120 " y2="10 " stroke-width="1 " stroke="rgb(0,0,0) "/>
 <line x1="120 " y1="60 " x2="160 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/>
@@ -169,7 +171,7 @@
 
                 <div>
 
-                    <svg class=" stre1 " viewBox="50 10 130 50 ">  
+                    <svg id="nextId" class="stre1" viewBox="50 10 130 50 ">  
                         <line x1="134 " y1="35 " x2="135 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/> 
                         <line x1="120 " y1="60 " x2="120 " y2="10 " stroke-width="1 " stroke="rgb(0,0,0) "/>
                         <line x1="120 " y1="60 " x2="160 " y2="35 " stroke-width="1 " stroke="rgb(0,0,0) "/>
@@ -470,7 +472,7 @@
                     </div> -->
 
                 <div class="triumf-center ">
-                    <div id="q">
+                    <div class="triumf-center__wrapper" id='current_song_list'>
                         <div class="triumf_img_block"><img class="triumf_img " src="img/jara.jpg" alt=" ">
                             <div class="triumf-name-block">
                                 <div class="triumf-name ">
@@ -513,7 +515,7 @@
                             <div class="triumf-name-block ">
                                 <div class="triumf-name ">
 
-                                    <input id="ashley" type="button" value="Play" />
+                                    <input id="zhara3" type="button" value="Play" />
                                     <audio id="audio3" src="audio/mixvon.net_ashley_o_-_on_a_roll_imp416438.mp3" autostart="false"></audio>
 
                                     <p>On A Rol</p>
