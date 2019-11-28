@@ -23,7 +23,7 @@ body {
 }
 
 .left {
-    height: 1500px;
+    max-height: 100%;
     width: 19%;
     margin-right: 0px;
     background: rgb(255, 0, 0);
@@ -83,6 +83,18 @@ body {
     margin: 0;
     padding: 0;
     justify-content: flex-start;
+}
+
+.stre1:active {
+    opacity: .5;
+}
+
+.stre2:active {
+    opacity: .5;
+}
+
+.stre_play:active {
+    opacity: .5;
 }
 
 .stre2 {

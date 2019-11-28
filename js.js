@@ -6,7 +6,7 @@ var state = {
             id: 1,
             imageSrc: 'img/jara.jpg',
             buttonId: 'gdgdfgdf',
-            audioId: 'audiogggffdfg1',
+            audioId: '1sdf',
             audioSrc: 'audio/Elena_Temnikova_-_ZHara.mp3',
             name: 'Жара',
             artist: 'Елена Темникова',
@@ -16,7 +16,7 @@ var state = {
             id: 2,
             imageSrc: 'img/senorita.jpg',
             buttonId: 'zhadfgfdfggra2',
-            audioId: 'g',
+            audioId: '2sdf',
             audioSrc: 'audio/Shawn Mendes & Camila Cabello - Senorita.mp3',
             name: 'Senorita',
             artist: 'Shawn Mendes',
@@ -26,7 +26,7 @@ var state = {
             id: 3,
             imageSrc: 'img/ashiel.jpg',
             buttonId: 'zhadfggfdgfdra3',
-            audioId: 'gfdf',
+            audioId: '3sdf',
             audioSrc: 'audio/mixvon.net_ashley_o_-_on_a_roll_imp416438.mp3',
             name: 'On A Rol',
             artist: 'Ashley O',
@@ -36,7 +36,7 @@ var state = {
             id: 4,
             imageSrc: 'img/egor.jpg',
             buttonId: 'gjhhg',
-            audioId: 'audio423dsd4234',
+            audioId: '4sdf',
             audioSrc: 'audio/egor_krid_-_samaya_samaya_(zaycev.net).mp3',
             name: 'Samaya Samaya',
             artist: 'Egor Krid',
@@ -81,20 +81,15 @@ function next() {
         return;
     }
 
-    if (state.lastSong != null && state.lastSong != state.music[state.music.length - 1].audioId) {;
+    if (state.lastSong != null && state.lastSong != state.music[state.music.length - 1].audioId) {
+        let lastSong = state.music.find(song => song.audioId === state.lastSong);
+        let lastSongIndex = state.music.indexOf(lastSong);
+        let nextSongId = state.music[lastSongIndex + 1].audioId;
 
-        let i = state.music.forEach(function(audioId) {
-            let s = audioId;
-            console.log(s);
-            // s.IndexOf(true);
-            // playOrPause(state.music.IndexOf().audioId);
-        });
-        playOrPause(s[0]);
-        // let so = state.music.includes(audioId = true);
-        // console.log(so + 1);
+        playOrPause(nextSongId);
+        return;
 
         // должен пробежаться по массиву, определить на каком треке сейчас находимся и перейти к следующему!
-        return;
     }
     if (state.lastSong != null && state.lastSong == state.music[state.music.length - 1].audioId) {
         return;
@@ -109,11 +104,16 @@ function prev() {
     if (state.currentSong == null && state.lastSong == null) {
         return;
     }
-    if (state.lastSong != null && state.lastSong != state.music[state.music.length[0]].audioId) {;
+    if (state.lastSong != null && state.lastSong != state.music[0].audioId) {
+        let lastSong = state.music.find(song => song.audioId === state.lastSong);
+        let lastSongIndex = state.music.indexOf(lastSong);
+        let prevSongId = state.music[lastSongIndex - 1].audioId;
+
+        playOrPause(prevSongId);
         // должен пробежаться по массиву, определить на каком треке сейчас находимся и перейти к следующему!
         return;
     }
-    if (state.lastSong != null && state.lastSong == state.music[state.music.length[0]].audioId) {
+    if (state.lastSong != null && state.lastSong == state.music[0].audioId) {
         return;
     }
     console.log('prev');
